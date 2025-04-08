@@ -1,0 +1,10 @@
+transformers>=3.0.2,<5
+ujson
+mlflow<=2.5
+tensorboard
+tqdm
+torch
+python-terrier==0.10.1
+faiss-gpu
+ranx
+#faiss-cpu
