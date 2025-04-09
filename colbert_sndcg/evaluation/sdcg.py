@@ -7,8 +7,6 @@ import pandas as pd
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from ranx.metrics.ndcg import _idcg
-
 import pyterrier as pt
 #pt.init()
 

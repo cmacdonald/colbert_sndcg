@@ -13,8 +13,8 @@ from pyterrier.measures import *
 import pandas as pd
 from tqdm import tqdm
 
-from colbert.parameters import DEVICE
-from colbert.modeling.colbert import ColBERT
+from colbert_sndcg.colbert.parameters import DEVICE
+from colbert_sndcg.colbert.modeling.colbert import ColBERT
 
 """
 This code is mainly adapted from https://github.com/Xiao0728/ColStar_VirtualAppendix/blob/main/Insights%20(RQ3%20Res)/ColStar_SMP_Demo%20(RQ3%20Res).ipynb
@@ -28,7 +28,7 @@ topics2019 = pt.get_dataset("trec-deep-learning-passages").get_topics('test-2019
 topics2020 = pt.get_dataset("trec-deep-learning-passages").get_topics('test-2020')
 qrels2020 = pt.get_dataset("trec-deep-learning-passages").get_qrels('test-2020')
 
-from pyterrier_colbert.ranking import ColBERTFactory, ColBERTModelOnlyFactory
+from colbert_sndcg.pyterrier_colbert.ranking import ColBERTFactory, ColBERTModelOnlyFactory
 
 index_root = "/root/nfs/colbert/evaluation/faiss_index/colbert"
 index_name = "msmarco_passage_index_colbert_150k"
