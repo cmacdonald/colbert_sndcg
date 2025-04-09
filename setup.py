@@ -25,7 +25,7 @@ with open('requirements.txt', 'rt') as f:
 
 setup(
     name="colbert_sndcg",
-    version=get_version("__init__.py"),
+    version=get_version("colbert_sndcg/__init__.py"),
     author="Ariane Mueller",
     author_email='ariane.mueller@glasgow.ac.uk',
     description="Semantically Proportioned nDCG for Explaining ColBERT's Learning Process",
