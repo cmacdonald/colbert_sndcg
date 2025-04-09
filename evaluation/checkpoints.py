@@ -1,194 +1,24 @@
-#File paths of ColBERT checkpoints
+#Download URLs of ColBERT checkpoints
+from huggingface_hub import hf_hub_url
 
 CHECKPOINTS = {}
 
-#original ColBERT (v1)
-CHECKPOINTS['colbert_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_01.33.06/checkpoints/colbert-1.dnn"
-
-CHECKPOINTS['colbert_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['colbert_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['colbert_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['colbert_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['colbert_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['colbert_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['colbert_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['colbert_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['colbert_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['colbert_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['colbert_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['colbert_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['colbert_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['colbert_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['colbert_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['colbert_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['colbert_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['colbert_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_15.36.42/checkpoints/colbert-200000.dnn"
-
-#aggregation='first', replication='replicate'
-CHECKPOINTS['ag_first_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.09.59/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ag_first_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ag_first_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ag_first_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ag_first_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ag_first_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ag_first_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ag_first_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ag_first_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ag_first_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ag_first_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ag_first_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ag_first_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ag_first_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ag_first_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ag_first_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ag_first_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ag_first_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ag_first_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-30_17.31.15/checkpoints/colbert-200000.dnn"
-
-#aggregation='avg', replication='replicate'
-CHECKPOINTS['ag_avg_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.10.38/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ag_avg_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ag_avg_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ag_avg_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ag_avg_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ag_avg_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ag_avg_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ag_avg_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ag_avg_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ag_avg_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ag_avg_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ag_avg_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ag_avg_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ag_avg_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ag_avg_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ag_avg_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ag_avg_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ag_avg_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ag_avg_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-03_00.07.55/checkpoints/colbert-200000.dnn"
-
-
-#aggregation='last', replication='replicate'
-CHECKPOINTS['ag_last_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.11.30/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ag_last_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ag_last_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ag_last_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ag_last_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ag_last_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ag_last_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ag_last_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ag_last_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ag_last_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ag_last_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ag_last_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ag_last_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ag_last_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ag_last_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ag_last_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ag_last_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ag_last_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ag_last_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-04_11.28.19/checkpoints/colbert-200000.dnn"
-
-#aggregation='avg', replication='pad'
-CHECKPOINTS['ag_avg_pad_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.12.41/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ag_avg_pad_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ag_avg_pad_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ag_avg_pad_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ag_avg_pad_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ag_avg_pad_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ag_avg_pad_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ag_avg_pad_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ag_avg_pad_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ag_avg_pad_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ag_avg_pad_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ag_avg_pad_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ag_avg_pad_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ag_avg_pad_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ag_avg_pad_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ag_avg_pad_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ag_avg_pad_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ag_avg_pad_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ag_avg_pad_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-10_03.19.23/checkpoints/colbert-200000.dnn"
-
 #linear_layer='none'
-CHECKPOINTS['ll_none_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.09.00/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ll_none_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ll_none_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ll_none_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ll_none_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ll_none_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ll_none_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ll_none_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ll_none_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ll_none_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ll_none_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ll_none_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ll_none_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ll_none_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ll_none_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ll_none_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ll_none_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ll_none_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ll_none_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.22.14/checkpoints/colbert-200000.dnn"
-
-#linear_layer='static_mapping'
-CHECKPOINTS['ll_static_mapping_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.13.47/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ll_static_mapping_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ll_static_mapping_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ll_static_mapping_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ll_static_mapping_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ll_static_mapping_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ll_static_mapping_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ll_static_mapping_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ll_static_mapping_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ll_static_mapping_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ll_static_mapping_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ll_static_mapping_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ll_static_mapping_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ll_static_mapping_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ll_static_mapping_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ll_static_mapping_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ll_static_mapping_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ll_static_mapping_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ll_static_mapping_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_02.24.44/checkpoints/colbert-200000.dnn"
-
-#linear_layer='trained_mapping'
-CHECKPOINTS['ll_trained_mapping_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.14.36/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ll_trained_mapping_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ll_trained_mapping_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ll_trained_mapping_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ll_trained_mapping_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ll_trained_mapping_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ll_trained_mapping_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ll_trained_mapping_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ll_trained_mapping_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ll_trained_mapping_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ll_trained_mapping_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ll_trained_mapping_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ll_trained_mapping_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ll_trained_mapping_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ll_trained_mapping_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ll_trained_mapping_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ll_trained_mapping_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ll_trained_mapping_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ll_trained_mapping_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-02_20.31.15/checkpoints/colbert-200000.dnn"
-
-#linear_layer='static_random'
-CHECKPOINTS['ll_static_random_0k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-08-15_19.15.28/checkpoints/colbert-1.dnn"
-CHECKPOINTS['ll_static_random_1k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-1000.dnn"
-CHECKPOINTS['ll_static_random_2k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-2000.dnn"
-CHECKPOINTS['ll_static_random_5k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-5000.dnn"
-CHECKPOINTS['ll_static_random_10k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-10000.dnn"
-CHECKPOINTS['ll_static_random_20k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-20000.dnn"
-CHECKPOINTS['ll_static_random_25k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-25000.dnn"
-CHECKPOINTS['ll_static_random_30k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-30000.dnn"
-CHECKPOINTS['ll_static_random_40k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-40000.dnn"
-CHECKPOINTS['ll_static_random_44k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-44000.dnn"
-CHECKPOINTS['ll_static_random_50k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-50000.dnn"
-CHECKPOINTS['ll_static_random_60k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-60000.dnn"
-CHECKPOINTS['ll_static_random_70k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-70000.dnn"
-CHECKPOINTS['ll_static_random_75k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-75000.dnn"
-CHECKPOINTS['ll_static_random_80k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-80000.dnn"
-CHECKPOINTS['ll_static_random_90k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-90000.dnn"
-CHECKPOINTS['ll_static_random_100k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-100000.dnn"
-CHECKPOINTS['ll_static_random_150k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-150000.dnn"
-CHECKPOINTS['ll_static_random_200k'] = "/root/nfs/colbert/colbert/experiments/dirty/train.py/2024-07-03_16.08.14/checkpoints/colbert-200000.dnn"
+CHECKPOINTS['ll_none_0k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-1.dnn')
+CHECKPOINTS['ll_none_1k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-1000.dnn')
+CHECKPOINTS['ll_none_2k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-2000.dnn')
+CHECKPOINTS['ll_none_5k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-5000.dnn')
+CHECKPOINTS['ll_none_10k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-10000.dnn')
+CHECKPOINTS['ll_none_20k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-20000.dnn')
+CHECKPOINTS['ll_none_25k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-25000.dnn')
+CHECKPOINTS['ll_none_30k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-30000.dnn')
+CHECKPOINTS['ll_none_40k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-40000.dnn')
+CHECKPOINTS['ll_none_50k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-50000.dnn')
+CHECKPOINTS['ll_none_60k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-60000.dnn')
+CHECKPOINTS['ll_none_70k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-70000.dnn')
+CHECKPOINTS['ll_none_75k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-75000.dnn')
+CHECKPOINTS['ll_none_80k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-80000.dnn')
+CHECKPOINTS['ll_none_90k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-9000.dnn')
+CHECKPOINTS['ll_none_100k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-100000.dnn')
+CHECKPOINTS['ll_none_150k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-150000.dnn')
+CHECKPOINTS['ll_none_200k'] = hf_hub_url('ArianeS21/colbert_sndcg','colbert-200000.dnn')

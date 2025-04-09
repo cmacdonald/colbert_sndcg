@@ -7,4 +7,4 @@ torch
 python-terrier==0.10.1
 faiss-gpu
 ranx
-#faiss-cpu
+huggingface_hub

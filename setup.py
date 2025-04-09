@@ -24,11 +24,11 @@ with open('requirements.txt', 'rt') as f:
             requirements.append(req)
 
 setup(
-    name="sndcg",
-    version=get_version("SnDCG/__init__.py"),
+    name="colbert_sndcg",
+    version=get_version("__init__.py"),
     author="Ariane Mueller",
     author_email='ariane.mueller@glasgow.ac.uk',
-    description="Content Quality Estimation for PyTerrier",
+    description="Semantically Proportioned nDCG for Explaining ColBERT's Learning Process",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     url="https://github.com/cmacdonald/colbert_sndcg",
@@ -37,8 +37,3 @@ setup(
     python_requires='>=3.10',
 )
 
-import torch
-if torch.cuda.is_available():
-    pip.main(['install','faiss-gpu'])
-else:
-    pip.main(['install','faiss-cpu'])
